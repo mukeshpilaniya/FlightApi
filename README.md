@@ -1,5 +1,5 @@
 # FlightApi
-
+``` Json
 Server url- http://localhost:8080
 Database- Mysql
 Java version- 1.8.0_242
@@ -130,3 +130,4 @@ Endpoint url:- http://localhost:8080/flight/reserveSeats/{userId}/{flightNumber}
 Example:
 Request Type-GET method
 Request:- http://localhost:8080/flight/reserveSeats/1/101/jaipur/delhi/2020-11-03/5
+```
