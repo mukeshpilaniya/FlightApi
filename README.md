@@ -129,7 +129,7 @@ Example:
 Request Type-GET method
 Request:- http://localhost:8080/flight/search/jaipur/delhi/2020-11-03
 ```
-``` Json
+``` css
 3. reserve seats
 
 Endpoint url:- http://localhost:8080/flight/reserveSeats/{userId}/{flightNumber}/{source}/{destination}/{date}/{seats}
