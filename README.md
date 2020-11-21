@@ -6,7 +6,7 @@ Java version- 1.8.0_242
 Project Type- Maven
 Framework- spring boot
 Dependencies- spring web,spring data Jpa
-```Mysql
+
 -- run these commands to setup mysql database for application before running the application jar
 -- drop database if exits
 DROP DATABASE IF EXISTS flight_db;
@@ -94,7 +94,7 @@ either you can build project using mavan package or run java -jar flight-0.0.1-S
 +--------------+--------------+------+-----+---------+----------------+
 
 ```
-
+```json
 # RestAPI call endpoints
 
 1. resister user 
@@ -102,6 +102,7 @@ Endpoint url:- http://localhost:8080/user/add
 Example:
 Request Type-POST method
 Request:- http://localhost:8080/user/add/
+
 {
     "name": "pilaniya1",
     "userName": "iceman",
@@ -117,7 +118,8 @@ Response:-
     "phoneNumber": 982688344,
     "ticket": []
 }
-
+```
+```java
 2. search flight
 
 Endpoint Url:- http://localhost:8080/flight/search/{source}/{destination}/{date}
@@ -127,6 +129,7 @@ Request:- http://localhost:8080/flight/search/jaipur/delhi/2020-11-03
 
 
 2. reserve seats
+
 Endpoint url:- http://localhost:8080/flight/reserveSeats/{userId}/{flightNumber}/{source}/{destination}/{date}/{seats}
 Example:
 Request Type-GET method
