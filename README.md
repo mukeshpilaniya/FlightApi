@@ -6,7 +6,8 @@ Java version- 1.8.0_242
 Project Type- Maven
 Framework- spring boot
 Dependencies- spring web,spring data Jpa
-
+```
+``` Json
 -- run these commands to setup mysql database for application before running the application jar
 -- drop database if exits
 DROP DATABASE IF EXISTS flight_db;
@@ -24,7 +25,8 @@ GRANT ALL PRIVILEGES ON flight_db. * TO 'flight_user'@'localhost';
 --run application
 
 either you can build project using mavan package or run java -jar flight-0.0.1-SNAPSHOT.jar
-
+```
+``` Json
 -- tables in flight_db
 +---------------------+
 | Tables_in_flight_db |
@@ -126,9 +128,9 @@ Endpoint Url:- http://localhost:8080/flight/search/{source}/{destination}/{date}
 Example:
 Request Type-GET method
 Request:- http://localhost:8080/flight/search/jaipur/delhi/2020-11-03
-
-
-2. reserve seats
+```
+``` Json
+3. reserve seats
 
 Endpoint url:- http://localhost:8080/flight/reserveSeats/{userId}/{flightNumber}/{source}/{destination}/{date}/{seats}
 Example:
