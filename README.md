@@ -26,7 +26,7 @@ GRANT ALL PRIVILEGES ON flight_db. * TO 'flight_user'@'localhost';
 
 either you can build project using mavan package or run java -jar flight-0.0.1-SNAPSHOT.jar
 ```
-``` Json
+``` css
 -- tables in flight_db
 +---------------------+
 | Tables_in_flight_db |
@@ -121,7 +121,7 @@ Response:-
     "ticket": []
 }
 ```
-```java
+``` css
 2. search flight
 
 Endpoint Url:- http://localhost:8080/flight/search/{source}/{destination}/{date}
