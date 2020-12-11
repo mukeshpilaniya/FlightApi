@@ -21,7 +21,7 @@ public class FlightController {
     @Autowired
     private FlightScheduleRepository flightScheduleRepository;
     @Autowired
-    private StationRepository stationRepository;
+    private AirportRepository airportRepository;
     @Autowired
     private TicketRepository ticketRepository;
     @Autowired
@@ -33,7 +33,7 @@ public class FlightController {
         int d = DateUtils.getDayOftheWeek(date);
         Day day = getDay(d);
         System.out.println(source+" "+destination+" "+date + " " + day);
-        return new ResponseEntity<>(flightScheduleRepository.getByFromFlightStationNameAndToFlightStationNameAndDay(source, destination, day), HttpStatus.OK);
+        return new ResponseEntity<>(flightScheduleRepository.getByFromFlightAirportNameAndToFlightAirportNameAndDay(source, destination, day), HttpStatus.OK);
     }
 
     public Day getDay(int d) {
@@ -68,17 +68,17 @@ public class FlightController {
     public ResponseEntity<?> reserveSeats(@PathVariable long userId, @PathVariable long flightNumber, @PathVariable String source,
                                           @PathVariable String destination, @PathVariable Date date, @PathVariable long seats) {
         FlightDetail bus = flightDetailRepository.findByFlightno(flightNumber);
-        Station fstation = stationRepository.findByName(source);
-        Station dstation = stationRepository.findByName(destination);
+        Airport fAirport = airportRepository.findByName(source);
+        Airport dAirport = airportRepository.findByName(destination);
 
         int d = DateUtils.getDayOftheWeek(date);
         Day day = getDay(d);
 
-        if (bus == null || fstation == null || dstation == null) {
-            return new ResponseEntity<>("flightnumber or station or userId not found", HttpStatus.NOT_FOUND);
+        if (bus == null || fAirport == null || dAirport == null) {
+            return new ResponseEntity<>("flightnumber or Airport or userId not found", HttpStatus.NOT_FOUND);
         } else {
 
-            List<Ticket> ticketList = ticketRepository.getByFlightnumerAndFromStationAndToStationAndAndDate(flightNumber, source, destination, date);
+            List<Ticket> ticketList = ticketRepository.getByFlightnumerAndFromAirportAndToAirportAndAndDate(flightNumber, source, destination, date);
             System.out.println("yes");
             long totalSeats = flightDetailRepository.findByFlightno(flightNumber).getNumberOfSeats();
             long bookSeats = 0;

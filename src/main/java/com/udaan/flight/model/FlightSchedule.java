@@ -16,12 +16,12 @@ public class FlightSchedule {
     private FlightDetail flight;
 
     @ManyToOne
-    @JoinColumn(name = "from_flight_station")
-    private Station fromFlightStation;
+    @JoinColumn(name = "from_flight_airport")
+    private Airport fromFlightAirport;
 
     @ManyToOne
-    @JoinColumn(name = "to_flight_station")
-    private Station toFlightStation;
+    @JoinColumn(name = "to_flight_airport")
+    private Airport toFlightAirport;
 
     @Column(name = "day_of_the_week")
     private Day day;
@@ -35,10 +35,10 @@ public class FlightSchedule {
     public FlightSchedule() {
     }
 
-    public FlightSchedule(FlightDetail flight, Station fromFlightStation, Station toFlightStation,Day day, Timestamp departureTime,Timestamp arrivalTime ){
+    public FlightSchedule(FlightDetail flight, Airport fromFlightAirport, Airport toFlightAirport, Day day, Timestamp departureTime, Timestamp arrivalTime ){
         this.flight=flight;
-        this.fromFlightStation=fromFlightStation;
-        this.toFlightStation=toFlightStation;
+        this.fromFlightAirport = fromFlightAirport;
+        this.toFlightAirport = toFlightAirport;
         // this.date=date;
         this.departureTime=departureTime;
         this.arrivalTime=arrivalTime;
@@ -61,20 +61,20 @@ public class FlightSchedule {
         this.flight = flight;
     }
 
-    public Station getFromFlightStation() {
-        return fromFlightStation;
+    public Airport getFromFlightAirport() {
+        return fromFlightAirport;
     }
 
-    public void setFromFlightStation(Station fromFlightStation) {
-        this.fromFlightStation = fromFlightStation;
+    public void setFromFlightAirport(Airport fromFlightAirport) {
+        this.fromFlightAirport = fromFlightAirport;
     }
 
-    public Station getToFlightStation() {
-        return toFlightStation;
+    public Airport getToFlightAirport() {
+        return toFlightAirport;
     }
 
-    public void setToFlightStation(Station toFlightStation) {
-        this.toFlightStation = toFlightStation;
+    public void setToFlightAirport(Airport toFlightAirport) {
+        this.toFlightAirport = toFlightAirport;
     }
 
     public Day getDay() {

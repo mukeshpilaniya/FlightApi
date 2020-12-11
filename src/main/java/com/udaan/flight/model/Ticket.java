@@ -23,10 +23,10 @@ public class Ticket {
     private long flightnumer;
 
     @Column(name = "source")
-    private String fromStation;
+    private String fromAirport;
 
     @Column(name = "destination")
-    private String toStation;
+    private String toAirport;
 
     @Column(name = "date")
     private Date date;
@@ -39,8 +39,8 @@ public class Ticket {
     public Ticket(User userId,long flightnumer,String source, String destination, Date date, long reserveSeats) {
         this.user=userId;
         this.flightnumer=flightnumer;
-        this.fromStation=source;
-        this.toStation=destination;
+        this.fromAirport=source;
+        this.toAirport=destination;
         this.date=date;
         this.reserveSeats=reserveSeats;
     }
@@ -69,20 +69,20 @@ public class Ticket {
         this.flightnumer = flightnumer;
     }
 
-    public String getFromStation() {
-        return fromStation;
+    public String getFromAirport() {
+        return fromAirport;
     }
 
-    public void setFromStation(String fromStation) {
-        this.fromStation = fromStation;
+    public void setFromAirport(String fromAirport) {
+        this.fromAirport = fromAirport;
     }
 
-    public String getToStation() {
-        return toStation;
+    public String getToAirport() {
+        return toAirport;
     }
 
-    public void setToStation(String toStation) {
-        this.toStation = toStation;
+    public void setToAirport(String toAirport) {
+        this.toAirport = toAirport;
     }
 
     public Date getDate() {
