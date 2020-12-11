@@ -194,7 +194,7 @@ Response:-
 ]
 ```
 
-``` jquery-css
+``` css
 3. reserve seats
 Endpoint url:- http://localhost:8080/flight/reserveSeats/{userId}/{flightNumber}/{source}/{destination}/{date}/{seats}
 Request Type-GET method
@@ -212,7 +212,7 @@ Response:-
 Request:- http://localhost:8080/flight/reserveSeats/1/101/jaipur/bangalore/2020-11-02/65
 Response:-  only 32 tickets are available
 ```
-``` jquery-css
+``` css
 4. view reservation
 Endpoint url:- http://localhost:8080/user/viewReservation/{userId}
 Request Type-GET method
