@@ -1,7 +1,7 @@
 # Flight Ticket Reservation
 
 #### Description
-Flight Ticket Reservation Duration: 90 minutes
+Flight Ticket Reservation Duration: 90 minutes <br>
 Design and implement an application to reserve flights based on source, destination and date. The application should take care of the following aspects:
 
     • Repository of flight information containing airline name, flight number, source, destination, start time, end time, frequency (days on which the flight is active), total number of seats in the aircraft(capacity)
