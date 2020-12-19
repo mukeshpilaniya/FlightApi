@@ -1,4 +1,28 @@
-# FlightApi
+# Flight Ticket Reservation
+
+#### Description
+Flight Ticket Reservation Duration: 90 minutes
+Design and implement an application to reserve flights based on source, destination and date. The application should take care of the following aspects:
+
+    • Repository of flight information containing airline name, flight number, source, destination, start time, end time, frequency (days on which the flight is active), total number of seats in the aircraft(capacity)
+    • Ability to search for flights based on source, destination anddate
+    • Reserve 'n'numberof seats on a particular fight based on availability of seats.
+
+APIs:
+
+    1. Search for flights based on source, destination anddate
+    2. Userbeingabletoreserve'n'numberofseatsonaparticularfight(thisAPI should keep availability of seats on that flight inmind)
+    3. View reservations for a users (both past andupcoming)
+
+Expectation:
+
+    • Clean professional levelCode
+    • Modelling of core entities and relationships betweenthem.
+    • Your code needs to be demonstrable. To do this, you can need to have an API based solution either as a WebApp, MobileApp or even providebasic API calls to run through the above mentionedworkflows.
+    • Workflows for creation of flight repository are not required. This could be pre- loaded as a part of applicationstartup.
+    • User Identification but notauthentication
+    • Backend Database is optional. However modelling should becomplete
+
 ##### Project info
 ``` json
 Server url- http://localhost:8080
